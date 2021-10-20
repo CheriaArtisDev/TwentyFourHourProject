@@ -8,13 +8,10 @@ using System.Threading.Tasks;
 
 namespace SocialMedia.Data
 {
-    public class Post
+    public class Comment
     {
         [Key]
         public int Id { get; set; }
-
-        [Required]
-        public string Title { get; set; }
 
         [Required]
         public string Text { get; set; }
@@ -22,7 +19,10 @@ namespace SocialMedia.Data
         [Required]
         public Guid AuthorId { get; set; }
 
-        [ForeignKey(nameof(Comment))]
-        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
-   
+        [ForeignKey(nameof(Post))]
+        public int PostId { get; set; }
+        public virtual Post Post { get; set; }
+
+        //public virtual ICollection<Reply> Replies { get; set; } = new List<Reply>();
+    }
 }
