@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using SocialMedia.Data;
 
 namespace SocialMediaAPI.Data
 {
@@ -34,6 +35,7 @@ namespace SocialMediaAPI.Data
         }
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Reply> Replys { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
