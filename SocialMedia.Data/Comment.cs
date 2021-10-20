@@ -19,10 +19,10 @@ namespace SocialMedia.Data
         [Required]
         public Guid AuthorId { get; set; }
 
-        [ForeignKey(nameof(Post))]
+       // [ForeignKey(nameof(Replies))]
+       //public virtual List<Reply> Replies { get; set; } = new List<Comment>();
+          
+        [ForeignKey(nameof(PostId))]
         public int PostId { get; set; }
-        public virtual Post Post { get; set; }
-
-        //public virtual ICollection<Reply> Replies { get; set; } = new List<Reply>();
     }
 }
