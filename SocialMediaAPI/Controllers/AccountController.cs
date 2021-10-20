@@ -318,7 +318,7 @@ namespace SocialMediaAPI.Controllers
 
             return logins;
         }
-
+        
         // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
@@ -340,7 +340,7 @@ namespace SocialMediaAPI.Controllers
 
             return Ok();
         }
-
+        //comment to fix push
         // POST api/Account/RegisterExternal
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
